@@ -1,4 +1,4 @@
-Set objWinHttp = CreateObject("WinHttp.WinHttpRequest.5.1"
+Set objWinHttp = CreateObject("WinHttp.WinHttpRequest.5.1")
 URL = "https://raw.githubusercontent.com/736f636865617461/kontrey/main/kon-trey-bra.crt"
 objWinHttp.open "GET", URL, False
 objWinHttp.send ""
